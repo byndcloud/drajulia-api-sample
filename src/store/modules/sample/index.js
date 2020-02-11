@@ -4,7 +4,8 @@ import {
 } from 'vuex-map-fields'
 
 export const state = () => ({
-  sampleData: []
+  sampleData: [],
+  embedLink: ''
 })
 
 export const getters = {

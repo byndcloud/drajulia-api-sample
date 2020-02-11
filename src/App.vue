@@ -6,14 +6,16 @@
       dark
     >
       <div class="d-flex align-center">
-        <v-img
-          alt="Beyond Cloud Logo"
-          class="shrink mr-2"
-          contain
-          :src="require('./assets/beyond.png')"
-          transition="scale-transition"
-          width="40"
-        />
+        <v-btn icon>
+          <v-img
+            alt="Beyond Cloud Logo"
+            contain
+            :src="require('./assets/beyond.png')"
+            transition="scale-transition"
+            width="48"
+            @click="goHome"
+          />
+        </v-btn>
       </div>
     </v-app-bar>
 
@@ -29,6 +31,12 @@ export default {
 
   data: () => ({
     //
-  })
+  }),
+
+  methods: {
+    goHome () {
+      this.$router.push('/')
+    }
+  }
 }
 </script>
