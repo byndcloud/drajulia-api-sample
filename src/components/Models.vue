@@ -4,10 +4,10 @@
       v-col()
         span.display-3 Modelos
     v-row(justify='center')
-      v-col(cols='auto')
-        v-scale-transition(group hide-on-leave)
-          v-skeleton-loader(v-if='loadingModels' type='card@3' min-width='600' key='loader')
-          template(v-else v-for='model in models')
+      v-col.d-flex.justify-center()
+        v-fade-transition(group hide-on-leave)
+          v-skeleton-loader.mb-4(v-if='loadingModels' v-for='i in 3' type='card' min-width='600' max-width='600' :key='i' elevation='1')
+          template(v-if='!loadingModels' v-for='model in models')
             v-card.mb-4(:key='model.uid' outlined max-width='600')
               v-card-title {{ model.name }}
               v-card-text
@@ -29,6 +29,7 @@ export default {
   }),
   async created () {
     const response = await this.$axios.get('/public/documentmodels')
+    console.log(response.data)
     this.models = response.data
     this.loadingModels = false
     console.log(this.models)
