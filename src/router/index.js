@@ -4,6 +4,8 @@ import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
+const cordova = window.cordova
+
 const routes = [
   {
     path: '/',
@@ -21,7 +23,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: cordova ? 'hash' : 'history',
   base: process.env.BASE_URL,
   routes
 })
