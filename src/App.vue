@@ -5,18 +5,9 @@
       color="primary"
       dark
     >
-      <div class="d-flex align-center">
-        <v-btn icon>
-          <v-img
-            alt="Beyond Cloud Logo"
-            contain
-            :src="require('./assets/beyond.png')"
-            transition="scale-transition"
-            width="48"
-            @click="goHome"
-          />
-        </v-btn>
-      </div>
+      <v-spacer />
+      <v-btn text class="headline text-none font-weight-light">Doutora Júlia</v-btn>
+      <v-spacer />
     </v-app-bar>
 
     <v-content>
