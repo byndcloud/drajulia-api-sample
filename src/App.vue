@@ -6,7 +6,7 @@
       dark
     >
       <v-spacer />
-      <v-btn text class="headline text-none font-weight-light">Doutora Júlia</v-btn>
+      <v-btn text class="headline text-none font-weight-light" @click="goHome">Doutora Júlia</v-btn>
       <v-spacer />
     </v-app-bar>
 
